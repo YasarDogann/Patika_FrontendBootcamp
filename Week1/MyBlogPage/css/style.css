@@ -1,0 +1,59 @@
+/* Genel sayfa stilleri */
+body {
+    background-color: black; /* Siyah arka plan */
+    color: #00ff00; /* Yeşil yazılar */
+    font-family: 'Courier New', monospace; /* Terminal fontu */
+    text-align: center;
+    padding: 20px;
+}
+
+/* Terminal efekti için çerçeve */
+.terminal {
+    border: 2px solid #00ff00;
+    padding: 20px;
+    display: inline-block;
+    text-align: left;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0px 0px 15px rgba(0, 255, 0, 0.5); /* Daha yumuşak ve büyük gölge */
+    border-radius: 10px; /* Kenarları yuvarlama */
+    background-color: #1a1a1a; /* Koyu arka plan */
+}
+
+/* Bağlantı stilleri */
+a {
+    color: #00ff00;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Yanıp sönen imleç efekti */
+@keyframes blink {
+    50% { opacity: 0; }
+}
+.cursor {
+    display: inline-block;
+    width: 10px;
+    height: 18px;
+    background-color: #00ff00;
+    animation: blink 1s infinite;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #121212;
+    color: #00ff00;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #00ff00;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
