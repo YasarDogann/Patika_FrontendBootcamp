@@ -41,6 +41,7 @@ Bu proje, kişisel bir blog sayfası oluşturmak için HTML, CSS ve JavaScript k
 ![alt text](image.png)
 
 2.about.html:
+
 ![alt text](image-1.png)
 
 3.blog.html:
