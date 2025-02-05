@@ -1,0 +1,84 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+header,footer{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+nav ul{
+    list-style: none;
+    padding: 0;
+}
+nav ul li{
+    display: inline;
+    margin-right: 1rem ;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    text-decoration: underline;
+}
+main{
+    padding: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.main-content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em; /* Öğeler arasındaki boşluğu ayarlar */
+    margin-top: 1em;
+}
+h2, h3{
+    color: #333;
+}
+article{
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1em;
+    padding: 1em;
+    flex: 1 1 calc(50% - 1em); /* Esnek bir genişlik ayarlar ve arada boşluk bırakır */
+    box-sizing: border-box; /* Kenar boşluklarını hesaba katar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 100%; /* Article'ın maksimum genişliğini belirler */
+}
+article img.article-image{
+    width: 80%;
+    height: auto;
+    max-height: 300px;
+    border-radius: 5px 5px 5px 5px; 
+    margin-bottom: 1em;
+    max-width: 100%;/* Article'ın maksimum genişliğini belirler */
+}
+article img.article-image2{
+    width: 80%;
+    height: auto;
+    max-height: 550px;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 1em;
+    max-width: 100%;
+}
+
+article h3{
+    margin-top: 0;
+}
+article p{
+    color: #666;
+}
+footer p {
+    margin: 0;
+}
