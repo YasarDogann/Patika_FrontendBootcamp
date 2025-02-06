@@ -1,0 +1,78 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/seyma.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+header,#home {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+header{
+    padding: 150px 50px;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 10px auto;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    text-align: center;
+}
+section p {
+    padding: 0 20px; /* Sağdan ve soldan boşluk ekler */
+}
+blockquote {
+    font-style: italic;
+    text-align: center;
+    margin: 20px 0;
+    color: #000;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+}
+#info{
+    background-color: #ff6f61;
+    margin: 0;
+}
+#books{
+    margin: 0;
+    background-color: cadetblue;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    position:static;
+    width: 100%;
+    bottom: 0;
+}
