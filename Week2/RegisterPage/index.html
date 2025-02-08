@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anket Formu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="title">Anket Formu</h1>
+    <p id="description">Lütfen aşağıdaki formu doldurarak görüşlerinizi paylaşın.</p>
+    
+    <form id="survey-form">
+        <label id="name-label" for="name">İsim:</label>
+        <input type="text" id="name" name="name" placeholder="Adınızı giriniz" required>
+        <br>
+        
+        <label id="email-label" for="email">E-posta:</label>
+        <input type="email" id="email" name="email" placeholder="E-posta adresinizi giriniz" required>
+        <br>
+        
+        <label id="number-label" for="number">Yaşınız:</label>
+        <input type="number" id="number" name="number" min="18" max="99" placeholder="Yaşınızı giriniz">
+        <br>
+        
+        <label for="dropdown">Favori Renk:</label>
+        <select id="dropdown" name="dropdown">
+            <option value="">Seçiniz</option>
+            <option value="red">Kırmızı</option>
+            <option value="blue">Mavi</option>
+        </select>
+        <br>
+        
+        <p>Cinsiyet:</p>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Erkek</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Kadın</label>
+        <br>
+        
+        <p>Hobileriniz:</p>
+        <input type="checkbox" id="sports" name="hobby" value="sports">
+        <label for="sports">Spor</label>
+        <input type="checkbox" id="music" name="hobby" value="music">
+        <label for="music">Müzik</label>
+        <br>
+        
+        <label for="comments">Ek Yorumlar:</label>
+        <textarea id="comments" name="comments" placeholder="Görüşlerinizi yazınız..."></textarea>
+        <br>
+        
+        <input type="submit" id="submit" value="Gönder">
+    </form>
+</body>
+</html>
