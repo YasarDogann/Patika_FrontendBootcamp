@@ -1,4 +1,4 @@
-# Blog Sitesi Ödevi
+# Instagram Clone Ödevi
 
 Bu proje, HTML - CSS ve Bootstrapt kullanarak instagram-clone oluşturmayı amaçlamaktadır. 
 
