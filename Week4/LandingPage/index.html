@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- Swiper CSS Bağlantısı -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <title>GalataStore</title>
+</head>
+<body>
+    <header class="bg-white">
+        <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 shadow-lg shadow-yellow-400" aria-label="Global">
+          <div class="flex lg:flex-1">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">GalataStore</span>
+              <img class="h-8 w-auto" src="img/siyah-galatasaray-logosu-transparent-png-by-thendr-24.png" alt="">
+            </a>
+          </div>
+          <div class="hidden lg:flex lg:gap-x-12">
+            <a href="#" class="text-sm/6 font-semibold text-gray-900">Ana Sayfa</a>
+            <a href="#" class="text-sm/6 font-semibold text-gray-900">Fikstür</a>
+            <a href="#" class="text-sm/6 font-semibold text-gray-900">Ürünler</a>
+          </div>
+          <div class="hidden lg:flex lg:flex-1 lg:justify-end ">
+            <a href="#" class="font-semibold text-gray-900 bg-sky-400 rounded-lg px-3  hover:bg-sky-900 ">Log in <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </nav>
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <div class="lg:hidden" role="dialog" aria-modal="true">
+          <!-- Background backdrop, show/hide based on slide-over state. -->
+          <div class="fixed inset-0 z-10"></div>
+          <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div class="mt-6 flow-root">
+              <div class="-my-6 divide-y divide-gray-500/10">
+                <div class="space-y-2 py-6">
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Features</a>
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Marketplace</a>
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Company</a>
+                </div>
+                <div class="py-6">
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Log in</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </header>
+      
+    <!-- 12'lik grid sistemi -->
+    <div class="grid grid-cols-12 gap-10 mx-auto max-w-7xl mt-10">
+      <!-- So taraf yazı alanı -->
+      <div class="col-span-4 shadow-lg shadow-red-400 p-5 flex items-center">
+        <p class="text-lg font-semibold text-justify leading-relaxed">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, fuga assumenda at facilis ducimus sapiente ab quisquam expedita suscipit, quasi labore, totam ex laboriosam sunt! Quia dolorem nesciunt culpa perferendis!
+          Magni minima sunt accusamus numquam ratione delectus, officiis quibusdam vel possimus aliquid eius maxime tenetur distinctio consequatur autem id beatae repudiandae doloremque eum repellendus. Animi, voluptatem itaque! Nulla, tenetur fuga?
+          Fuga recusandae quis veniam omnis, ex facilis consequatur! Nihil atque aliquam nam temporibus illum delectus laudantium impedit, ratione quaerat ipsa voluptatum dolores voluptatem nemo inventore architecto dignissimos non aut aperiam?
+        </p>
+      </div>
+      <!-- Sağ taraf resim -->
+      <div class="col-span-8 shadow-lg shadow-red-400 p-5 flex ">
+        <img src="img/25c0d94f3c1a4327efc5736f3c486f92.jpg" alt="resim" class="w-full h-175 object-cover rounded-lg">
+      </div>
+    </div>
+    
+    <section class="text-center py-12">
+      <!-- Küçük başlık -->
+      <h4 class="text-indigo-600 text-sm font-semibold uppercase">Ayva Çiçek Açmış</h4>
+
+       <!-- Büyük başlık -->
+      <h2 class="text-3xl font-bold text-gray-900 mt-2">Yaz mı  Gelecek</h2>
+
+      <!-- 3'lü kutu -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 max-w-5xl mx-auto">
+        <!-- kutu 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg shadow-yellow-400">
+          <h3 class="text-lg font-semibold">GALAXI</h3>
+          <p class="text-gray-600 mt-2">Muslera - Frankowski, Davinson, Apo, Eren - Lemina, Torreira - Ahmet, Sara, Barış - Osimhen</p>
+        </div>
+
+        <!-- Kutu 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg shadow-red-400">
+          <h3 class="text-lg font-semibold">Test</h3>
+          <p class="text-gray-600 mt-2">Efsane oyuncular hakkında bilgi edinin.</p>
+        </div>
+
+        <!-- Kutu 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg shadow-yellow-400">
+          <h3 class="text-lg font-semibold">Adım 3</h3>
+          <p class="text-gray-600 mt-2">Takımın başarılarını inceleyin.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto mt-12 p-6">
+      <!-- Sol Taraf (Resim) -->
+      <div class="flex justify-center items-center">
+          <img src="img/5c571d12588d8e0f529562d8fcbfd9dc.jpg" alt="Galatasaray" class="rounded-lg shadow-lg w-full h-75 max-w-md">
+      </div>
+  
+      <!-- Sağ Taraf (Slider) -->
+      <div class="p-6 bg-white shadow-lg rounded-lg flex flex-col items-center text-center">
+          <!-- Swiper Slider -->
+          <div class="swiper mySwiper w-full">
+              <div class="swiper-wrapper">
+                  <!-- Slide 1 -->
+                  <div class="swiper-slide">
+                      <img src="img/25c0d94f3c1a4327efc5736f3c486f92.jpg" class="w-16 h-16 rounded-full mx-auto mb-4 shadow-md" alt="Avatar">
+                      <p class="text-lg italic text-gray-700">“Galatasaray ruhu, sahada her şeyini vermektir.”</p>
+                      <h3 class="text-xl font-semibold mt-3">Fatih Terim</h3>
+                      <p class="text-sm text-gray-500">Eski Teknik Direktör</p>
+                  </div>
+  
+                  <!-- Slide 2 -->
+                  <div class="swiper-slide">
+                      <img src="img/siyah-galatasaray-logosu-transparent-png-by-thendr-24.png" class="w-16 h-16 rounded-full mx-auto mb-4 shadow-md" alt="Avatar">
+                      <p class="text-lg italic text-gray-700">“Galatasaray, sadece bir kulüp değil, bir ailedir.”</p>
+                      <h3 class="text-xl font-semibold mt-3">Arda Turan</h3>
+                      <p class="text-sm text-gray-500">Eski Futbolcu</p>
+                  </div>
+  
+                  <!-- Slide 3 -->
+                  <div class="swiper-slide">
+                      <img src="img/F3uCdohWYAAEmsr.jpg" class="w-16 h-16 rounded-full mx-auto mb-4 shadow-md" alt="Avatar">
+                      <p class="text-lg italic text-gray-700">“İnanmak, başarmanın yarısıdır.”</p>
+                      <h3 class="text-xl font-semibold mt-3">Mauro Icardi</h3>
+                      <p class="text-sm text-gray-500">Galatasaray Forveti - Kaptanı</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Swiper JS Bağlantısı -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+  });
+</script>
+</body>
+</html>
