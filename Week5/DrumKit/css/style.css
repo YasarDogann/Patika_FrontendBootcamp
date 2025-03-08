@@ -1,0 +1,32 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color:orange;
+    color: white;
+}
+
+.drum-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.drum {
+    width: 100px;
+    height: 100px;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #ff5733;
+    color: white;
+    box-shadow: 0 5px #b33922;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.drum:active, .drum.playing {
+    transform: scale(0.9);
+    box-shadow: 0 2px #b33922;
+}
