@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f1f5f8;
+    font-family: "Zilla Slab", serif;
+}
+
+h2 {
+    font-family: "Great Vibes", cursive;
+    font-size: 3rem;
+    text-align: center;
+    color: #ff6b6b;
+    margin-bottom: 2rem;
+}
+
+.menu {
+    margin-top: 20px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 40px;
+}
+
+.btn-item {
+    border: 1px solid #ff6b6b;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-item:hover {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+.menu-items {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 0.25rem solid black;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.menu-info {
+    flex-grow: 1;
+    padding: 0.5rem;
+}
+
+.menu-title {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.menu-title h4 {
+    font-size: 1.2rem;
+    color: #e00a00;
+    font-weight: 600;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.price {
+    font-size: 1.2rem;
+    color: #e00a00;
+}
+
+.menu-text {
+    padding-top: 0.5rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+.active {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.section-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+/* Responsive tasarım için medya sorgusu ekleyelim */
+@media (max-width: 992px) {
+    .section-center {
+        grid-template-columns: 1fr;  /* Mobil görünümde tek sütun */
+    }
+    
+    .photo {
+        width: 200px;
+        height: 200px;
+    }
+} 
