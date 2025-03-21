@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Sticky Navbar with Smooth Transition
+    // Sabit Navbar ve Yumuşak Geçiş Efekti
     const mainNav = document.getElementById('mainNav');
     
+    // Navbar'ın scroll durumuna göre güncellenmesi
     function updateNavbar() {
         if (window.scrollY > 50) {
             mainNav.classList.add('scrolled');
@@ -10,21 +11,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Initial check on page load
+    // Sayfa yüklendiğinde navbar kontrolü
     updateNavbar();
     
-    // Check on scroll
+    // Scroll sırasında navbar kontrolü
     window.addEventListener('scroll', function() {
         updateNavbar();
     });
 
-    // Class Tabs Logic with Animation
+    // Spor Sınıfları Butonları ve İçerik Gösterimi
     const classButtons = document.querySelectorAll('.class-btn');
     const classContents = document.querySelectorAll('.yoga-content, .group-content, .solo-content, .stretching-content');
 
     classButtons.forEach(btn => {
         btn.addEventListener('click', function() {
-            // Reset all buttons and content
+            // Tüm butonları ve içerikleri sıfırla
             classButtons.forEach(b => {
                 b.style.backgroundColor = '#0d365d';
                 b.style.transform = 'translateY(0)';
@@ -35,12 +36,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 content.style.display = 'none';
             });
 
-            // Set active button with enhanced styling
+            // Aktif butonu vurgula ve stil ver
             this.style.backgroundColor = '#ff7e00';
             this.style.transform = 'translateY(-3px)';
             this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
 
-            // Show corresponding content with fade-in effect
+            // İlgili içeriği fade-in efekti ile göster
             let contentClass = '';
             
             if (this.classList.contains('yoga-btn')) {
@@ -59,36 +60,37 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Set first tab (yoga) as active by default
+    // Varsayılan olarak yoga sekmesini aktif yap
     document.querySelector('.yoga-btn').style.backgroundColor = '#ff7e00';
     document.querySelector('.yoga-btn').style.transform = 'translateY(-3px)';
     document.querySelector('.yoga-btn').style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
     document.querySelector('.yoga-content').style.display = 'block';
 
-    // Enhanced BMI Calculator Logic
+    // BMI Hesaplayıcı Fonksiyonları
     const calculateBMI = document.getElementById('calculate-bmi');
     const weightInput = document.getElementById('weight');
     const heightInput = document.getElementById('height');
     const bmiResult = document.getElementById('bmi-result');
 
-    // Input validation for numbers only
+    // Sadece sayı girişi için doğrulama
     function validateNumberInput(event) {
         if (!/[0-9]|\./.test(event.key) && event.key !== 'Backspace' && event.key !== 'Delete' && event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') {
             event.preventDefault();
         }
     }
 
+    // Input alanları için sayı doğrulama dinleyicileri
     if (weightInput && heightInput) {
         weightInput.addEventListener('keydown', validateNumberInput);
         heightInput.addEventListener('keydown', validateNumberInput);
     }
 
-    // Function to calculate BMI with improved UI feedback
+    // BMI hesaplama fonksiyonu ve UI güncellemesi
     function performBMICalculation() {
         const weight = parseFloat(weightInput.value);
-        const height = parseFloat(heightInput.value) / 100; // Convert cm to meters
+        const height = parseFloat(heightInput.value) / 100; // cm'yi metreye çevir
 
-        // Input validation
+        // Girdi doğrulama
         if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
             bmiResult.innerHTML = 'Lütfen geçerli bir kilo ve boy giriniz.';
             bmiResult.style.color = '#dc3545';
@@ -96,11 +98,12 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
+        // BMI hesaplama formülü (kg/m²)
         const bmi = weight / (height * height);
         let category = '';
         let color = '';
 
-        // Determine BMI category and color
+        // BMI kategorisini ve rengini belirle
         if (bmi < 18.5) {
             category = 'Zayıf';
             color = '#17a2b8';
@@ -115,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
             color = '#dc3545';
         }
 
-        // Enhanced result display
+        // Sonucu görsel olarak göster
         bmiResult.innerHTML = `
             <div class="bmi-value">BMI: <strong>${bmi.toFixed(1)}</strong></div>
             <div class="bmi-category" style="color:${color}"><strong>${category}</strong></div>
@@ -124,11 +127,11 @@ document.addEventListener('DOMContentLoaded', function() {
         bmiResult.style.borderLeft = `4px solid ${color}`;
     }
 
-    // Add event listeners for BMI calculation
+    // BMI hesaplama için olay dinleyicileri
     if (calculateBMI) {
         calculateBMI.addEventListener('click', performBMICalculation);
         
-        // Also calculate on Enter key in inputs
+        // Enter tuşu ile hesaplama
         weightInput.addEventListener('keyup', function(e) {
             if (e.key === 'Enter') performBMICalculation();
         });
@@ -138,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Enhanced smooth scroll for navigation
+    // Sayfa içi yumuşak kaydırma
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -147,17 +150,17 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetElement = document.querySelector(targetId);
 
             if (targetElement) {
-                // Smooth scroll with offset for fixed navbar
+                // Sabit navbar için offset ile yumuşak kaydırma
                 window.scrollTo({
                     top: targetElement.offsetTop - 80,
                     behavior: 'smooth'
                 });
                 
-                // Update URL hash
+                // URL hash'ini güncelle
                 history.pushState(null, null, targetId);
             }
 
-            // Close the mobile menu if it's open
+            // Mobil menüyü kapat (açıksa)
             const navbarToggler = document.querySelector('.navbar-toggler');
             const navbarCollapse = document.querySelector('.navbar-collapse');
             
@@ -167,19 +170,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Enhanced trainer cards hover effect
+    // Eğitmen kartları için gelişmiş hover efekti
     const trainerCards = document.querySelectorAll('.trainer-card');
     
     trainerCards.forEach(card => {
+        // Fare üzerine geldiğinde efektler
         card.addEventListener('mouseenter', function() {
-            // Apply hover styles with smooth transitions
             this.style.transform = 'translateY(-15px)';
             this.style.boxShadow = '0 15px 25px rgba(0, 0, 0, 0.1)';
             
             const img = this.querySelector('img');
             if (img) img.style.transform = 'scale(1.08)';
             
-            // Create and add overlay if not present
+            // Overlay efekti oluştur
             if (!this.querySelector('.trainer-overlay')) {
                 const overlay = document.createElement('div');
                 overlay.classList.add('trainer-overlay');
@@ -195,13 +198,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 this.appendChild(overlay);
                 
-                // Fade in the overlay
+                // Overlay'i yavaşça göster
                 setTimeout(() => {
                     overlay.style.opacity = '1';
                 }, 10);
             }
             
-            // Update text colors
+            // Metin renklerini güncelle
             const trainerInfo = this.querySelector('.trainer-info');
             if (trainerInfo) {
                 const heading = trainerInfo.querySelector('h4');
@@ -210,24 +213,24 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
+        // Fare üzerinden ayrıldığında efektleri kaldır
         card.addEventListener('mouseleave', function() {
-            // Remove hover styles with smooth transitions
             this.style.transform = 'translateY(0)';
             this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.05)';
             
             const img = this.querySelector('img');
             if (img) img.style.transform = 'scale(1)';
             
-            // Fade out and remove overlay
+            // Overlay'i kaldır
             const overlay = this.querySelector('.trainer-overlay');
             if (overlay) {
                 overlay.style.opacity = '0';
                 setTimeout(() => {
                     this.removeChild(overlay);
-                }, 400); // Match the transition duration
+                }, 400);
             }
             
-            // Reset text colors
+            // Metin renklerini sıfırla
             const trainerInfo = this.querySelector('.trainer-info');
             if (trainerInfo) {
                 const heading = trainerInfo.querySelector('h4');
@@ -237,7 +240,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Form validation for contact form
+    // İletişim formu doğrulama
     const appointmentForm = document.querySelector('.appointment-form');
     if (appointmentForm) {
         appointmentForm.addEventListener('submit', function(e) {
@@ -249,122 +252,84 @@ document.addEventListener('DOMContentLoaded', function() {
             
             let isValid = true;
             
-            // Validate name
+            // İsim alanı doğrulama
             if (!nameInput.value.trim()) {
-                nameInput.style.borderColor = '#dc3545';
-                nameInput.style.boxShadow = '0 0 0 0.2rem rgba(220, 53, 69, 0.25)';
+                showError(nameInput, 'Lütfen adınızı giriniz');
                 isValid = false;
-                
-                // Create error message if not exists
-                if (!nameInput.nextElementSibling || !nameInput.nextElementSibling.classList.contains('error-message')) {
-                    const errorMsg = document.createElement('div');
-                    errorMsg.classList.add('error-message');
-                    errorMsg.style.color = '#dc3545';
-                    errorMsg.style.fontSize = '14px';
-                    errorMsg.style.marginTop = '5px';
-                    errorMsg.textContent = 'Lütfen adınızı giriniz';
-                    nameInput.parentNode.insertBefore(errorMsg, nameInput.nextSibling);
-                }
             } else {
-                nameInput.style.borderColor = '#28a745';
-                nameInput.style.boxShadow = '0 0 0 0.2rem rgba(40, 167, 69, 0.25)';
-                
-                // Remove error message if exists
-                if (nameInput.nextElementSibling && nameInput.nextElementSibling.classList.contains('error-message')) {
-                    nameInput.parentNode.removeChild(nameInput.nextElementSibling);
-                }
+                showSuccess(nameInput);
             }
             
-            // Validate email
+            // E-posta alanı doğrulama
             if (!emailInput.value.trim() || !isValidEmail(emailInput.value)) {
-                emailInput.style.borderColor = '#dc3545';
-                emailInput.style.boxShadow = '0 0 0 0.2rem rgba(220, 53, 69, 0.25)';
+                showError(emailInput, 'Lütfen geçerli bir e-posta adresi giriniz');
                 isValid = false;
-                
-                // Create error message if not exists
-                if (!emailInput.nextElementSibling || !emailInput.nextElementSibling.classList.contains('error-message')) {
-                    const errorMsg = document.createElement('div');
-                    errorMsg.classList.add('error-message');
-                    errorMsg.style.color = '#dc3545';
-                    errorMsg.style.fontSize = '14px';
-                    errorMsg.style.marginTop = '5px';
-                    errorMsg.textContent = 'Lütfen geçerli bir e-posta adresi giriniz';
-                    emailInput.parentNode.insertBefore(errorMsg, emailInput.nextSibling);
-                }
             } else {
-                emailInput.style.borderColor = '#28a745';
-                emailInput.style.boxShadow = '0 0 0 0.2rem rgba(40, 167, 69, 0.25)';
-                
-                // Remove error message if exists
-                if (emailInput.nextElementSibling && emailInput.nextElementSibling.classList.contains('error-message')) {
-                    emailInput.parentNode.removeChild(emailInput.nextElementSibling);
-                }
+                showSuccess(emailInput);
             }
             
-            // Validate message
+            // Mesaj alanı doğrulama
             if (!messageInput.value.trim()) {
-                messageInput.style.borderColor = '#dc3545';
-                messageInput.style.boxShadow = '0 0 0 0.2rem rgba(220, 53, 69, 0.25)';
+                showError(messageInput, 'Lütfen mesajınızı giriniz');
                 isValid = false;
-                
-                // Create error message if not exists
-                if (!messageInput.nextElementSibling || !messageInput.nextElementSibling.classList.contains('error-message')) {
-                    const errorMsg = document.createElement('div');
-                    errorMsg.classList.add('error-message');
-                    errorMsg.style.color = '#dc3545';
-                    errorMsg.style.fontSize = '14px';
-                    errorMsg.style.marginTop = '5px';
-                    errorMsg.textContent = 'Lütfen mesajınızı giriniz';
-                    messageInput.parentNode.insertBefore(errorMsg, messageInput.nextSibling);
-                }
             } else {
-                messageInput.style.borderColor = '#28a745';
-                messageInput.style.boxShadow = '0 0 0 0.2rem rgba(40, 167, 69, 0.25)';
-                
-                // Remove error message if exists
-                if (messageInput.nextElementSibling && messageInput.nextElementSibling.classList.contains('error-message')) {
-                    messageInput.parentNode.removeChild(messageInput.nextElementSibling);
-                }
+                showSuccess(messageInput);
             }
             
-            // If all inputs are valid, show success message and reset form
+            // Form başarılı ise
             if (isValid) {
-                // Show success message
-                const successMsg = document.createElement('div');
-                successMsg.classList.add('success-message');
-                successMsg.style.padding = '10px 15px';
-                successMsg.style.backgroundColor = 'rgba(40, 167, 69, 0.2)';
-                successMsg.style.color = '#28a745';
-                successMsg.style.borderRadius = '4px';
-                successMsg.style.marginTop = '15px';
-                successMsg.style.textAlign = 'center';
-                successMsg.textContent = 'Form başarıyla gönderildi!';
-                
-                // Add success message before the form
-                appointmentForm.parentNode.insertBefore(successMsg, appointmentForm);
-                
-                // Reset form
-                this.reset();
-                
-                // Reset validation styles
-                nameInput.style.borderColor = '';
-                nameInput.style.boxShadow = '';
-                emailInput.style.borderColor = '';
-                emailInput.style.boxShadow = '';
-                messageInput.style.borderColor = '';
-                messageInput.style.boxShadow = '';
-                
-                // Remove success message after 3 seconds
-                setTimeout(() => {
-                    if (successMsg.parentNode) {
-                        successMsg.parentNode.removeChild(successMsg);
-                    }
-                }, 3000);
+                showFormSuccess(this);
             }
         });
     }
     
-    // Email validation function
+    // Yardımcı fonksiyonlar
+    function showError(input, message) {
+        input.style.borderColor = '#dc3545';
+        input.style.boxShadow = '0 0 0 0.2rem rgba(220, 53, 69, 0.25)';
+        
+        if (!input.nextElementSibling || !input.nextElementSibling.classList.contains('error-message')) {
+            const errorMsg = document.createElement('div');
+            errorMsg.classList.add('error-message');
+            errorMsg.style.color = '#dc3545';
+            errorMsg.style.fontSize = '14px';
+            errorMsg.style.marginTop = '5px';
+            errorMsg.textContent = message;
+            input.parentNode.insertBefore(errorMsg, input.nextSibling);
+        }
+    }
+    
+    function showSuccess(input) {
+        input.style.borderColor = '#28a745';
+        input.style.boxShadow = '0 0 0 0.2rem rgba(40, 167, 69, 0.25)';
+        
+        if (input.nextElementSibling && input.nextElementSibling.classList.contains('error-message')) {
+            input.parentNode.removeChild(input.nextElementSibling);
+        }
+    }
+    
+    function showFormSuccess(form) {
+        const successMsg = document.createElement('div');
+        successMsg.classList.add('success-message');
+        successMsg.style.padding = '10px 15px';
+        successMsg.style.backgroundColor = 'rgba(40, 167, 69, 0.2)';
+        successMsg.style.color = '#28a745';
+        successMsg.style.borderRadius = '4px';
+        successMsg.style.marginTop = '15px';
+        successMsg.style.textAlign = 'center';
+        successMsg.textContent = 'Form başarıyla gönderildi!';
+        
+        form.parentNode.insertBefore(successMsg, form);
+        form.reset();
+        
+        setTimeout(() => {
+            if (successMsg.parentNode) {
+                successMsg.parentNode.removeChild(successMsg);
+            }
+        }, 3000);
+    }
+    
+    // E-posta doğrulama fonksiyonu
     function isValidEmail(email) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);

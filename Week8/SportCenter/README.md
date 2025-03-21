@@ -4,13 +4,13 @@ Bu proje, bir spor merkezi için tasarlanmış responsive bir web sitesidir. Fro
 
 ## Özellikler
 
-- Responsive tasarım (576px altı mobil görünüm desteği)
-- BMI (Vücut Kitle İndeksi) hesaplayıcı
-- Sınıf kategorileri ve sınıf bilgileri
-- Eğitmen profilleri (hover efektleri)
-- Sabit navigasyon çubuğu
-- Google Map entegrasyonu
-- Form doğrulama
+- Responsive tasarım (576px için mobil görünüm desteği)
+- BMI (Vücut Kitle İndeksi) hesaplayıcı (kg/m² formülü ile)
+- "Our Classes" bölümünde aktif butonlar ve spor dalı görselleri
+- "Our Best Trainers" bölümünde hover efektleri
+- Sabit navigasyon çubuğu (#355592 arka plan rengi)
+- Google Maps entegrasyonu
+- Section'lara ID üzerinden linklenmiş navbar
 
 ## Teknolojiler
 
@@ -25,11 +25,10 @@ Bu proje, bir spor merkezi için tasarlanmış responsive bir web sitesidir. Fro
 
 - DOM Manipülasyonu
 - Event Listeners
-- Form doğrulama
 - Smooth Scroll
-- Responsive navbar
+- Sabit (fixed) navbar
 - Hover efektleri
-- BMI hesaplama algoritması
+- BMI hesaplama algoritması (kg/m²)
 
 ## Klasör Yapısı
 
@@ -46,21 +45,15 @@ Projeyi lokal ortamınızda çalıştırmak için:
 
 Veya online olarak görmek için: [Canlı Demo](#)
 
-## Değerlendirme Kriterleri
+## İsterler Listesi
 
-1. Değişkenler ve fonksiyonlar anlaşılır şekilde isimlendirilmiştir
-2. Açıklayıcı yorum satırları ve README dosyası eklenmiştir
-3. Kodlama düzeni ve okunabilirliği yeterlidir
-4. Kodda doğru giriş kontrolü yapılmıştır
-5. Sayfa düzeni ve tasarım gereksinimlere uygundur
-6. Sayfa üzerinde kullanılan renkler uyumludur
-7. Sayfa farklı çözünürlüklerde doğru şekilde gösterilmektedir
-8. BMI Calculator doğru çalışmaktadır
-9. Navigation Bar sayfa hareketlerine tepki vermektedir
-10. Navigation Bar linklemeleri doğru çalışmaktadır
-11. Our Classes alanındaki butonlar aktif çalışmaktadır
-12. Our Best Trainers alanı için hover efekti çalışmaktadır
-13. Google Map içeriği aktiftir
+1. ✅ "Our Classes" altında bulunan butonlar aktif olmalı
+2. ✅ "Our Best Trainers" alanında hover ön izlemesi tüm öğeler için çalışmalı
+3. ✅ BMI Calculator aktif çalışmalı (BMI = kg/m²)
+4. ✅ Navbar üzerindeki linkler, section'lar ile ID üzerinden linklenmeli
+5. ✅ Navbar sayfa gezinmesi sırasında sabit kalmalı ve #355592 arka plana sahip olmalı
+6. ✅ Contact alanında aktif Google Map bulunmalı
+7. ✅ 576px için responsive tasarım uygulanmalı
 
 ## Geliştirici
 
