@@ -54,7 +54,3 @@ Veya online olarak görmek için: [Canlı Demo](#)
 5. ✅ Navbar sayfa gezinmesi sırasında sabit kalmalı ve #355592 arka plana sahip olmalı
 6. ✅ Contact alanında aktif Google Map bulunmalı
 7. ✅ 576px için responsive tasarım uygulanmalı
-
-## Geliştirici
-
-Ad Soyad - [E-posta Adresi] 
