@@ -1,0 +1,100 @@
+/* Genel arka plan rengi */
+body {
+  background-color: #2f3640;
+  color: #00d2d3;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* App container */
+.App {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  padding-top: 50px;
+}
+
+/* Zarları ortalamak için düzenlenmiş */
+.dice-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+/* Zar görüntüleri */
+.player img {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  background-color: #c0392b;
+}
+
+/* Zar atma butonu */
+button {
+  padding: 15px 30px;
+  font-size: 18px;
+  margin-top: 40px;
+  background-color: #00d2d3;
+  color: #2f3640;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #718093;
+  color: #2f3640;
+}
+
+/* Zarların dönme animasyonu */
+.rolling {
+  animation: roll 0.3s infinite;
+}
+
+/* Zarların dönme animasyonu için keyframes */
+@keyframes roll {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Oyunun başlığı */
+h1 {
+  color: #f5f6fa;
+  margin-top: 20px;
+  font-size: 48px;
+}
+
+/* Sonuç metni */
+h2 {
+  color: #f5f6fa;
+  font-size: 32px;
+  margin-top: 30px;
+}
+
+/* Input alanı */
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #00d2d3;
+  color: #2f3640;
+  background-color: #f5f6fa;
+  font-size: 16px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+/* Player alanının genel düzeni */
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
