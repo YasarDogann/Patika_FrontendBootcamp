@@ -1,12 +1,57 @@
-# React + Vite
+# PowerFull Spor Merkezi Web Sitesi
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu proje, bir spor merkezi için tasarlanmış responsive bir web sitesidir. Front-end teknolojileri kullanılarak geliştirilmiştir ve kullanıcıların spor merkezi hakkında bilgi alabilecekleri, sınıfları inceleyebilecekleri ve BMI hesaplayabilecekleri interaktif bir platformdur. React ile tasarlanmıştır.
 
-Currently, two official plugins are available:
+## Özellikler
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Responsive tasarım (576px için mobil görünüm desteği)
+- BMI (Vücut Kitle İndeksi) hesaplayıcı (kg/m² formülü ile)
+- "Our Classes" bölümünde aktif butonlar ve spor dalı görselleri
+- "Our Best Trainers" bölümünde hover efektleri
+- Sabit navigasyon çubuğu (#355592 arka plan rengi)
+- Google Maps entegrasyonu
+- Section'lara ID üzerinden linklenmiş navbar
 
-## Expanding the ESLint configuration
+## Teknolojiler
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- React
+- Bootstrap 5
+- Font Awesome
+- Google Maps API
+
+## Kullanılan JavaScript Özellikleri
+
+- DOM Manipülasyonu
+- Event Listeners
+- Smooth Scroll
+- Sabit (fixed) navbar
+- Hover efektleri
+- BMI hesaplama algoritması (kg/m²)
+
+## Klasör Yapısı
+
+- css/ - Stil dosyalarını içerir
+- js/ - JavaScript dosyalarını içerir
+- Resimler/ - Projede kullanılan görselleri içerir
+
+## Projeyi Çalıştırma
+
+Projeyi lokal ortamınızda çalıştırmak için:
+
+1. Projeyi bilgisayarınıza indirin
+2. `index.html` dosyasını bir web tarayıcısında açın
+
+Veya online olarak görmek için: [Canlı Demo](https://wondrous-maamoul-b13f1a.netlify.app/)
+
+## İsterler Listesi
+
+1. ✅ "Our Classes" altında bulunan butonlar aktif olmalı
+2. ✅ "Our Best Trainers" alanında hover ön izlemesi tüm öğeler için çalışmalı
+3. ✅ BMI Calculator aktif çalışmalı (BMI = kg/m²)
+4. ✅ Navbar üzerindeki linkler, section'lar ile ID üzerinden linklenmeli
+5. ✅ Navbar sayfa gezinmesi sırasında sabit kalmalı ve #355592 arka plana sahip olmalı
+6. ✅ Contact alanında aktif Google Map bulunmalı
+7. ✅ 576px için responsive tasarım uygulanmalı
