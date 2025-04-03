@@ -20,11 +20,4 @@ Bu proje, kullanıcı ile bilgisayar arasında oynanan basit bir zar oyunudur. A
 
 ## Ekran Görüntüsü
 
-![Dice Game Screenshot](dice.png)
-
-## Kurulum ve Kullanım
-
-### Projeyi Klonlayın
-
-```bash
-git clone https://github.com/kullanici-adi/dice-game.git
+![alt text](image.png)
