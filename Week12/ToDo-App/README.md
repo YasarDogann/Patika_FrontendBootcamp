@@ -1,9 +1,9 @@
 # ToDo Uygulaması
 
-Bu proje, kullanıcıların eğlenceli ve öğretici sorularla dolu bir quiz çözmelerine olanak tanıyan basit bir quiz uygulamasıdır. Uygulama, belirli bir süre boyunca her soruya yanıt verilmesini gerektirir ve sonunda kullanıcıya doğru cevap sayısı gösterilir.
+Bu proje, basit bir todo uygulamasıdır
 
 # Project Title
-Canlı demo : https://question-app-nu-beryl.vercel.app/
+Canlı demo : https://patika-frontend-bootcamp.vercel.app/
 
 ## Proje Amacı
 
